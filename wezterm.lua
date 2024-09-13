@@ -7,6 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 
+
 -- For example, changing the color scheme:
 config.color_scheme                 = 'Ayu Dark (Gogh)'
 config.font                         = wezterm.font('SFMono Nerd Font', { weight = "DemiBold" })
@@ -41,7 +42,7 @@ config.background                   = {
 }
 local backgrounds                   = { {
 	source = {
-		File = { path = "/users/wraithy/rivendell.gif", speed = 0.5 }
+		File = { path = wezterm.home_dir .. "/.config/wezterm/backgrounds/rivendell.gif", speed = 0.5 }
 	},
 	--	width = "100%",
 	horizontal_align = "Center",
@@ -54,7 +55,7 @@ local backgrounds                   = { {
 	opacity = 0.15
 }, {
 	source = {
-		File = { path = "/users/wraithy/shire.gif", speed = 0.7 }
+		File = { path = wezterm.home_dir .. "/.config/wezterm/backgrounds/shire.gif", speed = 0.7 }
 	},
 	--	width = "100%",
 	horizontal_align = "Center",
