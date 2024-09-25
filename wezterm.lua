@@ -1,23 +1,12 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-
+local splits = require("smart-splits")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
-config.keys = {
-	{
-		key = "Space",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.DisableDefaultAssignment,
-	},
-	{
-		key = "ú",
-		mods = "CTRL",
-		action = wezterm.action.DisableDefaultAssignment,
-	},
-}
+config.keys = splits
 -- For example, changing the color scheme:
 config.color_scheme = "Ayu Dark (Gogh)"
 config.font = wezterm.font("SFMono Nerd Font", { weight = "DemiBold" })
